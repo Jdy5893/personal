@@ -1,0 +1,552 @@
+body{
+  background-image: url(../img/body.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* header */
+header {
+  background-color: #fff;
+}
+header div.wrap {
+}
+header div.wrap nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: 100px;
+}
+header div.wrap nav h1 {
+  font-size: 0;
+  background-image: url(../img/logo.png);
+  width: 240px;
+  height: 53px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+header div.wrap nav h1 a {
+
+  width: 100%;
+  height: 100%;
+}
+header div.wrap nav ul.gnb {
+  justify-self: end;
+  gap: 25px;
+}
+header div.wrap nav ul.gnb li {
+
+}
+header div.wrap nav ul.gnb li a {
+  transition: 0.5s;
+}
+header div.wrap nav ul.gnb li:hover a{
+  color: #78d2d6;
+}
+header div.wrap nav ul.enb {
+  gap: 10px;
+}
+header div.wrap nav ul.enb li {
+
+}
+header div.wrap nav ul.enb li a {
+  font-size: 0;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+}
+header div.wrap nav ul.enb li:nth-child(1) a{
+  background-image: url(../img/notion.svg);
+}
+header div.wrap nav ul.enb li:nth-child(2) a{
+  background-image: url(../img/kakao-talk.svg);
+}
+/* 타이틀 */
+div#title {
+  height: 100%;
+  min-height: 700px;
+  /*! background-image: url(../img/body.png); */
+}
+div#title div.wrap {
+  /*! background-color: #ccc; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  row-gap: 20px;
+  /*! background-image: url(../img/body.png); */
+  /*! background-size: cover; */
+}
+div#title div.wrap h2 {
+ 
+}
+div#title div.wrap p {
+  color: #111;
+}
+/* about me */
+#aboutme {
+  height: 100%;
+  min-height: 700px;
+}
+#aboutme div.wrap {
+  grid-template-columns: auto 1fr 590px 1fr;
+  grid-template-rows: auto 1fr 1fr auto;
+  column-gap: 80px;
+  row-gap: 10px;
+}
+#aboutme div.wrap h2 {
+  grid-column: 1;
+  grid-row: 1;
+}
+#aboutme div.wrap figure {
+  grid-column: 2;
+  grid-row: 2 / span 2;
+  width: 300px;
+  height: 400px;
+}
+#aboutme div.wrap figure img {
+  width: 100%;
+  height: 100%;
+}
+#aboutme div.wrap figure figcaption {
+  
+  display: none;
+}
+#aboutme div.wrap ul.intro {
+  grid-column: 3;
+  grid-row: 2 / span 2;
+  line-height: 1.5;
+}
+#aboutme div.wrap ul.intro li {
+  
+  display: flex;
+  margin-bottom: 65px;
+}
+#aboutme div.wrap ul.intro li h3 { 
+  width: 100px;
+}
+#aboutme div.wrap ul.intro li p {
+  width: calc(100% - 100px);
+}
+#aboutme div.wrap ul.intro li:nth-child(1) p{
+  width: 100%;
+}
+#aboutme div.wrap ul.info { 
+  grid-column: 3;
+  grid-row: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /*! border: 1px solid; */
+  width: fit-content;
+  /*! padding: 33px 185px; */
+  justify-self: end;
+}
+#aboutme div.wrap ul.info li {
+}
+#aboutme div.wrap ul.info li strong {
+  font-size: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+#aboutme div.wrap ul.info li:nth-child(1) strong{
+  background-image: url(../img/email1.png);
+}
+#aboutme div.wrap ul.info li:nth-child(2) strong{
+  background-image: url(../img/ver2.svg);
+}
+##aboutme div.wrap ul.info li strong::before{
+  content:"" ;
+}
+/* 스킬 */
+#skill {
+  height: 100%;
+  min-height: 1035px;
+}
+#skill div.wrap {
+  flex-direction: column;
+  /*! background-image: radial-gradient( circle 410px at 50.5% 53.5%, rgba(133,222,207,1) 0%, rgba(255,255,255,0.31) 100.2% ); */
+}
+#skill div.wrap h2 {
+  margin-bottom: 50px;
+}
+#skill div.wrap ul.list {
+  grid-template-columns: auto 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto 1fr;
+  row-gap: 50px;
+  column-gap: 30px;
+}
+#skill div.wrap ul.list > li {
+  border: double #78B4D6B8;
+  border-radius: 10px;
+}
+#skill div.wrap ul.list > li:nth-child(1){
+  grid-column: 1 / span 5;
+  grid-row: 1;
+  /*! background-color: rgba(203, 248, 236, 0.5); */
+}
+#skill div.wrap ul.list > li:nth-child(2){
+  grid-column: 1;
+  grid-row: 2;
+}
+#skill div.wrap ul.list > li:nth-child(3){
+  grid-column: 2 / span 4;
+  grid-row: 2;
+}
+#skill div.wrap ul.list > li:nth-child(4){
+  grid-column: 1 / span 2;
+  grid-row: 3;
+}
+#skill div.wrap ul.list > li:nth-child(5){
+  grid-column: 3 / span 3;
+  grid-row: 3;
+}
+#skill div.wrap ul.list > li h3 {
+  text-align: center;
+  height: 56px;
+  margin-bottom: 10px;
+}
+#skill div.wrap ul.list > li ul.sub {
+  row-gap: 10px;
+  justify-content: space-around;
+}
+#skill div.wrap ul.list > li:nth-child(1) ul.sub{
+  flex-wrap: wrap;
+}
+#skill div.wrap ul.list > li:nth-child(2) ul.sub{
+}
+#skill div.wrap ul.list > li:nth-child(3) ul.sub{
+  
+}
+#skill div.wrap ul.list > li:nth-child(4) ul.sub{
+ 
+}
+#skill div.wrap ul.list > li:nth-child(5) ul.sub{
+
+}
+#skill div.wrap ul.list > li ul.sub li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#skill div.wrap ul.list > li:nth-child(1) ul.sub li{
+  width: calc(100% / 5);
+}
+#skill div.wrap ul.list > li:nth-child(2) ul.sub li{
+  
+}
+#skill div.wrap ul.list > li:nth-child(3) ul.sub li{
+  
+}
+#skill div.wrap ul.list > li:nth-child(4) ul.sub li{
+ 
+}
+#skill div.wrap ul.list > li:nth-child(5) ul.sub li{
+  
+}
+#skill div.wrap ul.list > li ul.sub li strong {
+  text-align: center;
+  height: 30px;
+}
+#skill div.wrap ul.list > li ul.sub li i::before{
+  content:"" ;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(120,210,214,0.5);
+  margin-bottom: 10px;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+}
+/* 프론트엔드 */
+#skill div.wrap ul.list > li:nth-child(1) ul.sub li:nth-child(1) i::before{
+  background-image: url(../img/frontend1.svg);
+}
+#skill div.wrap ul.list > li:nth-child(1) ul.sub li:nth-child(2) i::before{
+  background-image: url(../img/frontend2.svg);
+}
+#skill div.wrap ul.list > li:nth-child(1) ul.sub li:nth-child(3) i::before{
+  background-image: url(../img/frontend3.svg);
+}
+#skill div.wrap ul.list > li:nth-child(1) ul.sub li:nth-child(4) i::before{
+  background-image: url(../img/frontend4.svg);
+}
+#skill div.wrap ul.list > li:nth-child(1) ul.sub li:nth-child(5) i::before{
+  background-image: url(../img/frontend5.svg);
+}
+#skill div.wrap ul.list > li:nth-child(1) ul.sub li:nth-child(6) i::before{
+  background-image: url(../img/frontend6.svg);
+}
+#skill div.wrap ul.list > li:nth-child(1) ul.sub li:nth-child(7) i::before{
+  background-image: url(../img/access.png);
+}
+#skill div.wrap ul.list > li:nth-child(1) ul.sub li:nth-child(8) i::before{
+  background-image: url(../img/frontend8.svg);
+}
+#skill div.wrap ul.list > li:nth-child(1) ul.sub li:nth-child(9) i::before{
+  background-image: url(../img/frontend9.svg);
+}
+#skill div.wrap ul.list > li:nth-child(1) ul.sub li:nth-child(10) i::before{
+  background-image: url(../img/frontend10.svg);
+}
+/* 프레임워크 */
+#skill div.wrap ul.list > li:nth-child(2) ul.sub li:nth-child(1) i::before{
+  
+}
+#skill div.wrap ul.list > li:nth-child(2) ul.sub li:nth-child(2) i::before{
+  
+}
+/* 디자인 */
+#skill div.wrap ul.list > li:nth-child(3) ul.sub li:nth-child(1) i::before{
+  
+}
+#skill div.wrap ul.list > li:nth-child(3) ul.sub li:nth-child(2) i::before{
+  
+}
+#skill div.wrap ul.list > li:nth-child(3) ul.sub li:nth-child(3) i::before{
+  
+}
+#skill div.wrap ul.list > li:nth-child(3) ul.sub li:nth-child(4) i::before{
+  
+}
+#skill div.wrap ul.list > li:nth-child(3) ul.sub li:nth-child(5) i::before{
+  
+}
+#skill div.wrap ul.list > li:nth-child(3) ul.sub li:nth-child(6) i::before{
+  
+}
+#skill div.wrap ul.list > li:nth-child(3) ul.sub li:nth-child(7) i::before{
+  
+}
+#skill div.wrap ul.list > li:nth-child(3) ul.sub li:nth-child(8) i::before{
+  
+}
+/* 버전관리 */
+#skill div.wrap ul.list > li:nth-child(4) ul.sub li:nth-child(1) i::before{
+  
+}
+#skill div.wrap ul.list > li:nth-child(4) ul.sub li:nth-child(2) i::before{
+  
+}
+#skill div.wrap ul.list > li:nth-child(4) ul.sub li:nth-child(3) i::before{
+
+}
+#skill div.wrap ul.list > li:nth-child(4) ul.sub li:nth-child(4) i::before{
+
+}
+/* 기타도구 */
+#skill div.wrap ul.list > li:nth-child(5) ul.sub li:nth-child(1) i::before{
+
+}
+#skill div.wrap ul.list > li:nth-child(5) ul.sub li:nth-child(2) i::before{
+
+}
+#skill div.wrap ul.list > li:nth-child(5) ul.sub li:nth-child(3) i::before{
+
+}
+#skill div.wrap ul.list > li:nth-child(5) ul.sub li:nth-child(4) i::before{
+
+}
+#skill div.wrap ul.list > li:nth-child(5) ul.sub li:nth-child(5) i::before{
+
+}
+#skill div.wrap ul.list > li:nth-child(5) ul.sub li:nth-child(6) i::before{
+
+}
+#skill div.wrap ul.list > li ul.sub li i {
+  text-align: center;
+}
+/* 포트폴리오 */
+#portfolio {
+  margin-top: 50px;
+  height: 100%;
+  min-height: 800px;
+}
+#portfolio div.wrap {
+  flex-wrap: wrap;
+  gap: 50px;
+}
+#portfolio div.wrap h2 {
+  margin-right: 50px;
+}
+#portfolio div.wrap p {
+  width: 80%;
+  text-align: center;
+  line-height: 1.5;
+}
+#portfolio div.wrap ul.list {
+  display: initial;
+  width: 100%;
+  background-color: #78B4D67A;
+  border-radius: 10px;
+}
+#portfolio div.wrap ul.list > li {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  column-gap: 30px;
+  row-gap: 20px;
+  padding: 100px 0;
+}
+#portfolio div.wrap ul.list > li:nth-child(2){
+  
+}
+#portfolio div.wrap ul.list > li h3 {
+  text-align: center;
+  grid-column: 1;
+  grid-row: 1;
+  margin-bottom: 10px;
+}
+#portfolio div.wrap ul.list > li figure {
+  grid-column: 1;
+  grid-row: 2;
+  width: 400px;
+  position: relative;
+}
+#portfolio div.wrap ul.list > li figure::after{
+  content:"" ;
+  display: block;
+  width: 100px;
+  height: 200px;
+  position: absolute;
+  bottom: 0px;
+  right: -100px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#portfolio div.wrap ul.list > li:nth-child(1) figure::after{
+  background-image: url(../img/pf1-phone.png);
+}
+#portfolio div.wrap ul.list > li:nth-child(2) figure::after{
+  background-image: url(../img/pf2-phone.png);
+}
+#portfolio div.wrap ul.list > li:nth-child(3) figure::after{
+  background-image: url(../img/pf1-phone.png);
+}
+#portfolio div.wrap ul.list li figure img {
+  width: 100%;
+  height: 100%;
+}
+#portfolio div.wrap ul.list li figure figcaption {
+  display: none;
+}
+#portfolio div.wrap ul.list li ul.sub {
+  grid-column: 2;
+  grid-row: 2;
+  align-content: center;
+}
+#portfolio div.wrap ul.list li ul.sub li {
+  line-height: 1.5;
+}
+#portfolio div.wrap ul.list > li ul.sub li:nth-child(4){
+  display: flex;
+}
+#portfolio div.wrap ul.list li ul.sub li strong {
+  display: inline-block;
+  width: 100px;
+}
+#portfolio div.wrap ul.list li ul.sub li ul {
+
+}
+#portfolio div.wrap ul.list li ul.sub li ul li {
+
+}
+#portfolio div.wrap ul.list li ul.sub li a {
+
+}
+/* 프로세스 */
+#process{
+  height: 100%;
+}
+/* 컨텍 */
+#contact{
+  height: 100%;
+  background-image: linear-gradient( 178.7deg, rgba(255,255,255,0.21) 58.3%, rgba(125,212,216,1) 95.8% );
+}
+/* 하단 */
+footer {
+  background-color: #78d2d6;
+  overflow: hidden;
+}
+footer a{
+  
+}
+footer div.wrap {
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+footer div.wrap::before{
+  content:"" ;
+  border-top: 2px dashed aliceblue;
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  transform: translateX(calc((100% - 1440px) / -2))
+}
+footer div.wrap h1 {
+  font-size: 0;
+  background-image: url(../img/logo2.png);
+  width: 240px;
+  height: 53px;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+footer div.wrap h1 a {
+  width: 100%;
+  height: 100%;
+}
+footer div.wrap ul.sns {
+  gap: 30px;
+}
+footer div.wrap ul.sns li {
+
+}
+footer div.wrap ul.sns li a {
+  font-size: 0;
+  width: 50px;
+  height: 50px;
+  display: block;
+  background-size: contain;
+}
+footer div.wrap ul.sns li:nth-child(1) a{
+  background-image: url(../img/notion.svg);
+}
+footer div.wrap ul.sns li:nth-child(2) a{
+  background-image: url(../img/ver2.svg);
+}
+footer div.wrap ul.sns li:nth-child(3) a{
+  background-image: url(../img/google-drive.svg);
+}
+footer div.wrap ul.sns li:nth-child(4) a{
+  background-image: url(../img/codepen.svg);
+}
+footer div.wrap ul.fnb {
+  
+}
+footer div.wrap ul.fnb li {
+  
+}
+footer div.wrap ul.fnb li a {
+  padding: 0 20px;
+  transition: 0.5s
+}
+footer div.wrap ul.fnb li:hover a{
+  color: #f2f2f2;
+}
+footer div.wrap p {
+  
+}
