@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
-
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <!-- 상단영역 -->
@@ -39,13 +39,14 @@
         <div class="wrap">
             <h2 class="h1">사용자 중심의 웹 퍼블리싱, 미래를 만듭니다</h2>
             <p class="h4">새로운 도전을 향한 열정적인 웹퍼블리셔 정다영</p>
+            <a href="http://www.freepik.com">Designed by Freepik</a>
         </div>
     </div>
     <!-- 메인 -->
     <!-- about me -->
     <section id="aboutme">
         <div class="wrap paddingT50 paddingB50 grid">
-            <h2 class="h2">About Me</h2>
+            <h2 class="h2 borderB">About Me</h2>
             <figure>
                 <img src="https://placehold.co/400x600/png" alt="정다영">
                 <figcaption>정다영</figcaption>
@@ -81,7 +82,7 @@
     <!-- skill -->
     <section id="skill">
         <div class="wrap paddingT50 paddingB50 flex">
-            <h2 class="h2 borderT">Skill&Tools</h2>
+            <h2 class="h2 borderB">Skill&Tools</h2>
             <ul class="list grid">
                 <li>
                     <h3 class="h4">프론트엔드</h3>
@@ -144,8 +145,8 @@
     <!-- Portfolio  -->
     <section id="portfolio">
         <div class="wrap paddingT50 paddingB50 flex">
-            <h2 class="h2">Portfolio</h2>
-            <p>"아래 작품들은 제가 학원에서 수료하는 동안 진행한 다양한 웹디자인 및 웹퍼블리싱 프로젝트들입니다.<span class="block"></span>
+            <h2 class="h2 borderB">Portfolio</h2>
+            <p class="p15">"아래 작품들은 제가 학원에서 수료하는 동안 진행한 다양한 웹디자인 및 웹퍼블리싱 프로젝트들입니다.<span class="block"></span>
                 각 프로젝트는 최신 기술과 디자인 트렌드를 반영하여 제작되었으며, 실무에서의 적용 가능성을 염두에 두고 개발되었습니다."
             </p>
             <ul class="list flex">
@@ -159,45 +160,25 @@
                         <li><strong class="bold">개요</strong>The-K한국교직원공제회 사이트 디자인 및 퍼블리싱</li>
                         <li><strong class="bold">역할</strong>전체 디자인 및 프론트엔드 퍼블리싱</li>
                         <li><strong class="bold">사용한 기술</strong>HTML5, CSS3, JavaScript, jQuery, Bootstrap</li>
-                        <li class="work">
-                            <strong class="bold">작업 과정</strong>
-                            <ul>
-                                <li>아이디어 구상 및 컨셉 설정</li>
-                                <li>와이어프레임 및 디자인 시안 제작</li>
-                                <li>HTML/CSS로 레이아웃 구현</li>
-                                <li>JavaScript/jQuery로 동적 요소 추가</li>
-                                <li>반응형 디자인 구현</li>
-                            </ul>
-                        </li>
                         <li><strong class="bold">기여도</strong>80% (디자인, 퍼블리싱 및 테스트)</li>
                         <li><a href="ecommerce_live_link" class="block">작품보기</a></li>
                     </ul>
                 </li>
-                <li class="grid hide">
+                <li class="grid">
                     <h3 class="h4">알툴즈 홈페이지</h3>
                     <figure>
-                        <img src="img/pf1.png" alt="알툴즈 홈페이지">
+                        <img src="img/pf2.png" alt="알툴즈 홈페이지">
                         <figcaption>알툴즈 홈페이지</figcaption>
                     </figure>
                     <ul class="sub">
                         <li><strong class="bold">개요</strong>개인 포트폴리오 사이트 디자인 및 퍼블리싱</li>
                         <li><strong class="bold">역할</strong>전체 디자인 및 프론트엔드 퍼블리싱</li>
                         <li><strong class="bold">사용한 기술</strong>HTML5, CSS3, JavaScript, React</li>
-                        <li class="work">
-                            <strong class="bold">작업 과정</strong>
-                            <ul>
-                                <li>컨셉 설정 및 아이디어 스케치</li>
-                                <li>와이어프레임 및 프로토타입 제작</li>
-                                <li>React를 사용한 컴포넌트 기반 개발</li>
-                                <li>CSS3로 스타일링 및 애니메이션 추가</li>
-                                <li>반응형 디자인 적용</li>
-                            </ul>
-                        </li>
                         <li><strong class="bold">기여도</strong>100% (단독 프로젝트)</li>
                         <li><a href="portfolio_live_link" class="block">작품보기</a></li>
                     </ul>
                 </li>
-                <li class="grid hide">
+                <li class="grid">
                     <h3 class="h4">프로젝트 3: Blog Platform</h3>
                     <figure>
                         <img src="img/pf1.png" alt="Blog Platform">
@@ -207,16 +188,6 @@
                         <li><strong class="bold">개요</strong>블로그 플랫폼 디자인 및 퍼블리싱</li>
                         <li><strong class="bold">역할</strong>전체 디자인 및 프론트엔드 퍼블리싱</li>
                         <li><strong class="bold">사용한 기술</strong>HTML5, CSS3, JavaScript, Vue.js</li>
-                        <li class="work">
-                            <strong class="bold">작업 과정</strong>
-                            <ul>
-                                <li>사용자 요구 분석 및 기능 정의</li>
-                                <li>와이어프레임 및 초기 디자인 시안 제작</li>
-                                <li>Vue.js를 사용한 컴포넌트 기반 개발</li>
-                                <li>CSS3로 스타일링 및 레이아웃 구성</li>
-                                <li>반응형 디자인 구현</li>
-                            </ul>
-                        </li>
                         <li><strong class="bold">기여도</strong>90% (디자인, 퍼블리싱 및 테스트)</li>
                         <li><a href="blog_platform_live_link" class="block">작품보기</a></li>
                     </ul>
@@ -226,14 +197,57 @@
     </section>
     <!-- Work Process -->
     <section id="process">
-        <div class="wrap paddingT50 paddingB50 flex">
-            <h2 class="h2">Work Process</h2>
+        <div class="wrap paddingT50 paddingB50 grid">
+            <h2 class="h2 borderB">Learning Archive</h2>
+            <p>학습 과정에서 생성된 문서, 자료, 산출물을 체계적으로 모아놓았습니다</p>
+            <h3 class="h5 bold">UI/UX 웹디자인,웹퍼블리셔 <span class="block"></span>5개월 과정<span class="block"></span>[2024.04.02 - 08.22]</h3>
+            <ul class="flex">
+                <li class="sm14">포토샵(기초)</li>
+                <li class="sm14">일러스트(기초)</li>
+                <li class="sm14">프로토타입 기초데이터<span class="block"></span>수집 및 스케치</li>
+                <li class="sm14">프로토타입 제작 및<span class="block"></span> 사용성 테스트</li>
+                <li class="sm14">HTML & CSS</li>
+                <li class="sm14">서비스·경험디자인<span class="block"></span> 관찰조사</li>
+                <li class="sm14">서비스·경험디자인<span class="block"></span> 시나리오 개발</li>
+                <li class="sm14">디자인 구성요소 설계</li>
+                <li class="sm14">디자인 구성요소 제작</li>
+                <li class="sm14">디자인 구성요소 응용</li>
+                <li class="sm14">자바스크립트 <span class="block"></span>& 제이쿼리</li>
+                <li class="sm14">스마트문화앱 UX 설계</li>
+                <li class="sm14">스마트문화앱 UI 디자인</li>
+                <li class="sm14">프로젝트 완료 자료정리</li>
+                <li class="sm14">프로젝트 완료<span class="block"></span> 결과보고서 작성</li>
+                <li class="sm14">프로젝트 완료<span class="block"></span> 최종보고</li>
+                <li class="sm14">Vue.js</li>
+                <li class="sm14">웹영상콘텐츠 후반작업<span class="block"></span>-비NCS실기</li>
+                <li class="sm14">디지털디자인 사후관리</li>
+            </ul>
+            <a href="" class="block">Learning Archive 보기</a>
+            <div class="sourcesite">
+                <h3>My Source Site</h3>
+                <ul class="src flex">
+                    <li><a href="" class="block" target="_blank">GDWEB</a></li>
+                    <li><a href="" class="block" target="_blank">Pinterest</a></li>
+                    <li><a href="" class="block" target="_blank">pixabay</a></li>
+                    <li><a href="" class="block" target="_blank">unsplash</a></li>
+                    <li><a href="" class="block" target="_blank">구글폰트</a></li>
+                    <li><a href="" class="block" target="_blank">Canva</a></li>
+                    <li><a href="" class="block" target="_blank">Adobe Color</a></li>
+                    <li><a href="" class="block" target="_blank">gliffy</a></li>
+                </ul>
+            </div>
         </div>
     </section>
     <!-- Contact -->
     <section id="contact">
-        <div class="wrap paddingT50 paddingB50 flex">
-            <h2 class="h2">Contact</h2>
+        <div class="wrap paddingT50 paddingB50 grid">
+            <h2 class="h2 borderB">Contact</h2>
+            <p class="p15">궁금한 사항이나 제안이 있으시면 연락 주시기 바랍니다.</p>
+            <ul>
+                <li><a href="">이메일</a></li>
+                <li><a href="">카카오톡</a></li>
+            </ul>
+            <a href="https://forms.gle/7P5rdaRdw2GGzUaD9" class="qna" target="_blank">문의사항 보내기</a>
         </div>
     </section>
     <!-- 하단영역 -->
