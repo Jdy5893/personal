@@ -16,7 +16,7 @@
 .h2{ /* 섹션 제목 */
   font-size: 36px;
   font-weight: 600;
-  color: #303030;
+  color: #222 !important;
 }
 .h3{ /* 목록 제목 1 */
   font-size: 32px;
@@ -24,7 +24,7 @@
 .h4{ /* 목록 제목 2 */
   font-size: 24px;
   font-weight: 600;
-  color: #444;
+  color: #333;
 }
 .h5{ 
   font-size: 20px;
@@ -91,9 +91,24 @@
 .hide{
   display: none;
 }
-
-
-
+/* 버튼 스타일 */
+.b-medium{
+  width: fit-content;
+  padding: 10px;
+  text-align: center;
+}
+.rounded{
+  border-radius: 10px;
+}
+.p-color{
+  
+}
+/* 보더스타일 */
+.borderB{
+  border-bottom: 4px dashed #ccc;
+  padding-bottom: 5px;
+  width: fit-content;
+}
 
 
 
