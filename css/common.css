@@ -1,4 +1,4 @@
-.body{
+body{
   font-family: "Noto Sans KR", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
@@ -55,7 +55,7 @@
   padding-top: 20px;
 }
 .paddingB20{
-  padding-bottom: 20px;
+  /*! padding-bottom: 20px; */
 }
 .paddingT30{
   padding-top: 30px;

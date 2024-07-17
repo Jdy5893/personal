@@ -13,6 +13,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/jquery-3.7.1.js"></script>
+    <!-- 슬릭 -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.pfAni').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: false,
+                autoplaySpeed: 2000,
+                dots: false,
+                infinite: true,
+                speed: 1500,
+                cssEase: 'ease-out',
+                arrows: true,
+                fade: true
+                // asNavFor: '.pfsAni'
+            });
+            // $('.pfsAni').slick({
+            //     slidesToShow: 1,
+            //     slidesToScroll: 1,
+            //     autoplay: false,
+            //     autoplaySpeed: 2000,
+            //     dots: false,
+            //     infinite: true,
+            //     speed: 1500,
+            //     cssEase: 'ease-out',
+            //     arrows: true,
+            //     fade: false,
+            //     asNavFor: '.pfAni'
+            // });
+        });
+    </script>
 </head>
 <body>
     <!-- 상단영역 -->
@@ -31,13 +66,14 @@
                     <li><a href="" class="block h6">Notion</a></li>
                     <li><a href="" class="block h6">카톡</a></li>
                 </ul>
+                <button class="ham">메뉴보기</button>
             </nav>
         </div>
     </header>
     <!-- 타이틀영역 -->
     <div id="title">
         <div class="wrap">
-            <h2 class="h1">사용자 중심의 웹 퍼블리싱, 미래를 만듭니다</h2>
+            <h2 class="h1">Portfolio</h2>
             <p class="h4">새로운 도전을 향한 열정적인 웹퍼블리셔 정다영</p>
             <a href="http://www.freepik.com">Designed by Freepik</a>
         </div>
@@ -149,44 +185,56 @@
             <p class="p15">"아래 작품들은 제가 학원에서 수료하는 동안 진행한 다양한 웹디자인 및 웹퍼블리싱 프로젝트들입니다.<span class="block"></span>
                 각 프로젝트는 최신 기술과 디자인 트렌드를 반영하여 제작되었으며, 실무에서의 적용 가능성을 염두에 두고 개발되었습니다."
             </p>
-            <ul class="list flex">
-                <li class="grid">
+            <!-- <div class="wimg pfsAni">
+                <img src="img/pf1sumnail.png" alt="">
+                <img src="img/pf2sumnail.png" alt="">
+                <img src="img/pf3sumnail.png" alt="">
+                <img src="img/pf4sumnail.png" alt="">
+            </div> -->
+            <ul class="list pfAni">
+                <li class="flex pf1">
                     <h3 class="h4">The-K한국교직원공제회 홈페이지</h3>
                     <figure>
                         <img src="img/pf1.png" alt="The-K한국교직원공제회 홈페이지">
                         <figcaption>한국교직원공제회 홈페이지</figcaption>
                     </figure>
                     <ul class="sub">
-                        <li><strong class="bold">개요</strong>The-K한국교직원공제회 사이트 디자인 및 퍼블리싱</li>
-                        <li><strong class="bold">역할</strong>전체 디자인 및 프론트엔드 퍼블리싱</li>
                         <li><strong class="bold">사용한 기술</strong>HTML5, CSS3, JavaScript, jQuery, Bootstrap</li>
                         <li><strong class="bold">기여도</strong>80% (디자인, 퍼블리싱 및 테스트)</li>
                         <li><a href="ecommerce_live_link" class="block">작품보기</a></li>
                     </ul>
                 </li>
-                <li class="grid">
+                <li class="flex pf2">
                     <h3 class="h4">알툴즈 홈페이지</h3>
                     <figure>
                         <img src="img/pf2.png" alt="알툴즈 홈페이지">
                         <figcaption>알툴즈 홈페이지</figcaption>
                     </figure>
                     <ul class="sub">
-                        <li><strong class="bold">개요</strong>개인 포트폴리오 사이트 디자인 및 퍼블리싱</li>
-                        <li><strong class="bold">역할</strong>전체 디자인 및 프론트엔드 퍼블리싱</li>
                         <li><strong class="bold">사용한 기술</strong>HTML5, CSS3, JavaScript, React</li>
                         <li><strong class="bold">기여도</strong>100% (단독 프로젝트)</li>
                         <li><a href="portfolio_live_link" class="block">작품보기</a></li>
                     </ul>
                 </li>
-                <li class="grid">
-                    <h3 class="h4">프로젝트 3: Blog Platform</h3>
+                <li class="flex pf3">
+                    <h3 class="h4">하이트진로 홈페이지</h3>
                     <figure>
-                        <img src="img/pf1.png" alt="Blog Platform">
+                        <img src="img/pf3.png" alt="Blog Platform">
                         <figcaption>사용자 친화적인 인터페이스와 편리한 콘텐츠 관리 기능을 갖춘 블로그 플랫폼</figcaption>
                     </figure>
                     <ul class="sub">
-                        <li><strong class="bold">개요</strong>블로그 플랫폼 디자인 및 퍼블리싱</li>
-                        <li><strong class="bold">역할</strong>전체 디자인 및 프론트엔드 퍼블리싱</li>
+                        <li><strong class="bold">사용한 기술</strong>HTML5, CSS3, JavaScript, Vue.js</li>
+                        <li><strong class="bold">기여도</strong>90% (디자인, 퍼블리싱 및 테스트)</li>
+                        <li><a href="blog_platform_live_link" class="block">작품보기</a></li>
+                    </ul>
+                </li>
+                <li class="flex pf4">
+                    <h3 class="h4">독도체험관 홈페이지</h3>
+                    <figure>
+                        <img src="img/pf4.png" alt="Blog Platform">
+                        <figcaption>사용자 친화적인 인터페이스와 편리한 콘텐츠 관리 기능을 갖춘 블로그 플랫폼</figcaption>
+                    </figure>
+                    <ul class="sub">
                         <li><strong class="bold">사용한 기술</strong>HTML5, CSS3, JavaScript, Vue.js</li>
                         <li><strong class="bold">기여도</strong>90% (디자인, 퍼블리싱 및 테스트)</li>
                         <li><a href="blog_platform_live_link" class="block">작품보기</a></li>
