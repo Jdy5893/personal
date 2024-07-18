@@ -32,11 +32,10 @@
 - FRED PIZZA https://jdy5893.github.io/pf5/
 
 ## 스크린샷 또는 데모(포트폴리오 웹사이트의 스크린샷을 추가)
-![pf1](https://github.com/pageservice/personal/assets/71798491/040b7316-5c4c-4a09-b7e8-6c54d60ec832)
-![pf2](https://github.com/pageservice/personal/assets/71798491/1a7c723b-1e1b-4cb6-9f45-6b17b89482e9)
-![pf1-어큐닉](https://github.com/pageservice/personal/assets/71798491/3e7a5d1c-3326-4ffc-ac79-3fe4a96fe6a3)
-![pf4](https://github.com/pageservice/personal/assets/71798491/e8b59bed-76df-470c-8aec-71f580ab6cca)
-
+![pf1](https://github.com/user-attachments/assets/5de4ef38-d376-48e0-a5f9-90cba798b7fc)
+![pf2](https://github.com/user-attachments/assets/c8c5c70c-3f5f-4e5e-a843-8a04a6230a7a)
+![pf3](https://github.com/user-attachments/assets/cef06492-e94d-4b59-a9fc-35ec74ec3d26)
+![pf4](https://github.com/user-attachments/assets/227f8bc3-0dc3-461a-8150-bf52906194f6)
 
 
 
