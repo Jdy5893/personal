@@ -23,29 +23,104 @@
             $('.pfAni').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                autoplay: false,
+                autoplay: true,
                 autoplaySpeed: 2000,
-                dots: false,
+                dots: true,
                 infinite: true,
                 speed: 1500,
                 cssEase: 'ease-out',
-                arrows: true,
-                fade: true
-                // asNavFor: '.pfsAni'
+                arrows: false,
+                fade: true,
+                dotsClass: 'slick-dots',
+                customPaging: function(slide, i){
+                    return '<img src="img/slick-dot/i'+(i+1)+'.png" alt="">'
+                }
+                
+                
             });
-            // $('.pfsAni').slick({
-            //     slidesToShow: 1,
-            //     slidesToScroll: 1,
-            //     autoplay: false,
-            //     autoplaySpeed: 2000,
-            //     dots: false,
-            //     infinite: true,
-            //     speed: 1500,
-            //     cssEase: 'ease-out',
-            //     arrows: true,
-            //     fade: false,
-            //     asNavFor: '.pfAni'
-            // });
+
+           
+
+            // 각 메뉴 누르면 그 위치로
+            var c = [
+                $("#aboutme").offset().top,
+                $("#skill").offset().top,
+                $("#portfolio").offset().top,
+                $("#process").offset().top,
+                $("#contact").offset().top
+            ];
+            var n;
+            $("header div.wrap nav ul.gnb li").click(function(){
+                n = $(this).index();
+                $("html,body").animate({scrollTop:c[n]},1000);
+                return false;
+            });
+            $("footer div.wrap ul.fnb li").click(function(){
+                n = $(this).index();
+                $("html,body").animate({scrollTop:c[n]},1000);
+                return false;
+            });
+
+            // top버튼
+            $("body").prepend('<button class="top">TOP</button>');
+            $(".top").click(function(){
+                $("html,body").animate({scrollTop:0},1000);
+            });
+
+            $(".top").hide();
+            var aboutT = $("#aboutme").offset().top;
+            var ws;
+            $(window).scroll(function(){
+                ws = $(window).scrollTop();
+                if(ws>aboutT){
+                    $(".top").fadeIn();
+                }
+                if(ws<aboutT){
+                    $(".top").fadeOut();
+                }
+            });
+
+            $("#skill div.wrap ul.icon li:nth-of-type(1)").addClass("clickBtn");
+            $("#skill div.wrap ul.icon li").click(function(){
+                $(this).addClass("clickBtn");
+                $("#skill div.wrap ul.icon li").not(this).removeClass("clickBtn");
+            });
+
+            $("#skill div.wrap div:not(.iconsub1)").hide();
+            //스킬 li 클릭시 해당 div 나오게
+            $("#skill div.wrap ul.icon li:nth-of-type(1)").click(function(){
+                $("#skill div.wrap .iconsub1").show();
+                $("#skill div.wrap div:not(.iconsub1)").hide();
+            });
+            $("#skill div.wrap ul.icon li:nth-of-type(2)").click(function(){
+                $("#skill div.wrap .iconsub2").show();
+                $("#skill div.wrap div:not(.iconsub2)").hide();
+            });
+            $("#skill div.wrap ul.icon li:nth-of-type(3)").click(function(){
+                $("#skill div.wrap .iconsub3").show();
+                $("#skill div.wrap div:not(.iconsub3)").hide();
+            });
+            $("#skill div.wrap ul.icon li:nth-of-type(4)").click(function(){
+                $("#skill div.wrap .iconsub4").show();
+                $("#skill div.wrap div:not(.iconsub4)").hide();
+            });
+            $("#skill div.wrap ul.icon li:nth-of-type(5)").click(function(){
+                $("#skill div.wrap .iconsub5").show();
+                $("#skill div.wrap div:not(.iconsub5)").hide();
+            });
+    
+        });
+
+
+        
+    </script>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        $(document).ready(function(){
+            AOS.init();
         });
     </script>
 </head>
@@ -75,7 +150,8 @@
         <div class="wrap">
             <h2 class="h1">Portfolio</h2>
             <p class="h4">새로운 도전을 향한 열정적인 웹퍼블리셔 정다영</p>
-            <a href="http://www.freepik.com">Designed by Freepik</a>
+            <!-- <a href="http://www.freepik.com">Designed by Freepik</a> -->
+             
         </div>
     </div>
     <!-- 메인 -->
@@ -117,67 +193,93 @@
     </section>
     <!-- skill -->
     <section id="skill">
-        <div class="wrap paddingT50 paddingB50 flex">
-            <h2 class="h2 borderB">Skill&Tools</h2>
-            <ul class="list grid">
-                <li>
-                    <h3 class="h4">프론트엔드</h3>
-                    <ul class="sub flex">
-                        <li class="p15"><strong class="bold">HTML5</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">CSS3</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">JavaScript</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">jQuery</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">반응형 웹디자인</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">웹표준</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">웹접근성</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">웹폰트</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">웹아이콘</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">SVG</strong><i class="block">중급</i></li>
-                    </ul>
-                </li>
-                <li>
-                    <h3 class="h4">프레임워크 및<span class="block"></span> 라이브러리</h3>
-                    <ul class="sub flex">
-                        <li class="sm13"><strong class="bold">Vue.js</strong><i class="block">초급</i></li>
-                        <li class="sm13"><strong class="bold">Bootstrap</strong><i class="block">중급</i></li>
-                    </ul>
-                </li>
-                <li>
-                    <h3 class="h4">디자인 Tools</h3>
-                    <ul class="sub flex">
-                        <li class="sm13"><strong class="bold">Photoshop</strong><i class="block">중급</i></li>
-                        <li class="sm13"><strong class="bold">Illustrator</strong><i class="block">중급</i></li>
-                        <li class="sm13"><strong class="bold">Figma</strong><i class="block">중급</i></li>
-                        <li class="sm13"><strong class="bold">Kakao Oven</strong><i class="block">중급</i></li>
-                        <li class="sm13"><strong class="bold">Balsamiq</strong><i class="block">중급</i></li>
-                        <li class="sm13"><strong class="bold">Almind</strong><i class="block">중급</i></li>
-                        <li class="sm13"><strong class="bold">Premiere Pro</strong><i class="block">중급</i></li>
-                        <li class="sm13"><strong class="bold">After Effects</strong><i class="block">중급</i></li>
-                    </ul>
-                </li>
-                <li>
-                    <h3 class="h4">버전 관리 및 협업 도구</h3>
-                    <ul class="sub flex">
-                        <li class="sm13"><strong class="bold">Git</strong><i class="block">중급</i></li>
-                        <li class="sm13"><strong class="bold">GitHub</strong><i class="block">중급</i></li>
-                        <li class="sm13"><strong class="bold">Google <span class="block"></span> Drive</strong><i class="block">중급</i></li>
-                        <li class="sm13"><strong class="bold">Firefox <span class="block"></span> 개발자 도구</strong><i class="block">중급</i></li>
-                    </ul>
-                </li>
-                <li>
-                    <h3 class="h4">기타 도구 및 기술</h3>
-                    <ul class="sub flex">
-                        <li class="sm13"><strong class="bold">VS Code</strong><i class="block">중급</i></li>
-                        <li class="sm13"><strong class="bold">Atom Editor</strong><i class="block">중급</i></li>
-                        <li class="sm13"><strong class="bold">Emmet <span class="block"></span>(Zen Coding)</strong><i class="block">중급</i></li>
-                        <li class="sm13"><strong class="bold">Sass</strong><i class="block">중급</i></li>
-                        <li class="sm13"><strong class="bold">웹사이트 <span class="block"></span>최적화</strong><i class="block">중급</i></li>
-                        <li class="sm13"><strong class="bold">검색엔진 <span class="block"></span>최적화 (SEO)</strong><i class="block">중급</i></li>
-                    </ul>
-                </li>
+        <div class="wrap grid paddingT50 paddingB50">
+            <h2 class="h2 borderB">SKill&Tools</h2>
+            <ul class="icon">
+                <li>프론트엔드</li>
+                <li>디자인툴</li>
+                <li>프레임워크 / 버전관리 및 협업도구</li>
+                <li>기타 도구 및 기술</li>
             </ul>
+            <div class="iconsub iconsub1">
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>jQuery</li>
+                    <li>반응형 웹디자인</li>
+                    <li>웹표준</li>
+                    <li>웹접근성</li>
+                    <li>웹폰트</li>
+                    <li>웹아이콘</li>
+                    <li>SVG</li>
+                </ul>
+            </div>
+            <div class="iconsub iconsub2">
+                <ul>
+                    <li>포토샵</li>
+                    <li>일러스트레이터</li>
+                    <li>피그마</li>
+                    <li>발사믹</li>
+                    <li>프리미엄 프로</li>
+                    <li>애프터 이펙트</li>
+                </ul>
+            </div>
+            <div class="iconsub iconsub3">
+                <div class="is3-1">
+                    <h3>프레임워크</h3>
+                    <ul>
+                        <li>vue.js</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                </div>
+                <div class="is3-2">
+                    <h3>프레임워크</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Goole Drive</li>
+                        <li>Firefox 개발자도구</li>
+                    </ul>
+                </div>   
+            </div>
+            <div class="iconsub iconsub4">
+                <ul>
+                    <li>VS Code</li>
+                    <li>Atom Editor</li>
+                    <li>Emmet<span class="block"></span>(Zen Coding)</li>
+                    <li>Sass</li>
+                    <li>웹사이트<span class="block"></span>최적화</li>
+                    <li>검색엔진<span class="block"></span>최적화(SEO)</li>
+                </ul>
+            </div>
         </div>
+        <section id="rolling">
+            <div class="sourceSite">
+                <section class="source">
+                    <p>GDWEB</p>
+                    <p>Pinterest</p>
+                    <p>pixabay</p>
+                    <p>unsplash</p>
+                    <p>구글폰트</p>
+                    <p>Canva</p>
+                    <p>Adobe Color</p>
+                    <p>gliffy</p>
+                </section>
+                <section class="source">
+                    <p>GDWEB</p>
+                    <p>Pinterest</p>
+                    <p>pixabay</p>
+                    <p>unsplash</p>
+                    <p>구글폰트</p>
+                    <p>Canva</p>
+                    <p>Adobe Color</p>
+                    <p>gliffy</p>
+                </section>
+            </div>
+        </section>
     </section>
+  
     <!-- Portfolio  -->
     <section id="portfolio">
         <div class="wrap paddingT50 paddingB50 flex">
@@ -185,12 +287,6 @@
             <p class="p15">"아래 작품들은 제가 학원에서 수료하는 동안 진행한 다양한 웹디자인 및 웹퍼블리싱 프로젝트들입니다.<span class="block"></span>
                 각 프로젝트는 최신 기술과 디자인 트렌드를 반영하여 제작되었으며, 실무에서의 적용 가능성을 염두에 두고 개발되었습니다."
             </p>
-            <!-- <div class="wimg pfsAni">
-                <img src="img/pf1sumnail.png" alt="">
-                <img src="img/pf2sumnail.png" alt="">
-                <img src="img/pf3sumnail.png" alt="">
-                <img src="img/pf4sumnail.png" alt="">
-            </div> -->
             <ul class="list pfAni">
                 <li class="flex pf1">
                     <h3 class="h4">The-K한국교직원공제회 홈페이지</h3>
@@ -201,7 +297,7 @@
                     <ul class="sub">
                         <li><strong class="bold">사용한 기술</strong>HTML5, CSS3, JavaScript, jQuery, Bootstrap</li>
                         <li><strong class="bold">기여도</strong>80% (디자인, 퍼블리싱 및 테스트)</li>
-                        <li><a href="ecommerce_live_link" class="block">작품보기</a></li>
+                        <li><a href="https://jdy5893.github.io/pf1/" class="block">작품보기</a></li>
                     </ul>
                 </li>
                 <li class="flex pf2">
@@ -213,7 +309,7 @@
                     <ul class="sub">
                         <li><strong class="bold">사용한 기술</strong>HTML5, CSS3, JavaScript, React</li>
                         <li><strong class="bold">기여도</strong>100% (단독 프로젝트)</li>
-                        <li><a href="portfolio_live_link" class="block">작품보기</a></li>
+                        <li><a href="https://jdy5893.github.io/pf2/" class="block">작품보기</a></li>
                     </ul>
                 </li>
                 <li class="flex pf3">
@@ -225,7 +321,7 @@
                     <ul class="sub">
                         <li><strong class="bold">사용한 기술</strong>HTML5, CSS3, JavaScript, Vue.js</li>
                         <li><strong class="bold">기여도</strong>90% (디자인, 퍼블리싱 및 테스트)</li>
-                        <li><a href="blog_platform_live_link" class="block">작품보기</a></li>
+                        <li><a href="https://jdy5893.github.io/pf3/" class="block">작품보기</a></li>
                     </ul>
                 </li>
                 <li class="flex pf4">
@@ -237,7 +333,19 @@
                     <ul class="sub">
                         <li><strong class="bold">사용한 기술</strong>HTML5, CSS3, JavaScript, Vue.js</li>
                         <li><strong class="bold">기여도</strong>90% (디자인, 퍼블리싱 및 테스트)</li>
-                        <li><a href="blog_platform_live_link" class="block">작품보기</a></li>
+                        <li><a href="https://jdy5893.github.io/pf4/" class="block">작품보기</a></li>
+                    </ul>
+                </li>
+                <li class="flex pf5">
+                    <h3 class="h4">프레드피자 홈페이지</h3>
+                    <figure>
+                        <img src="img/pf5.png" alt="Blog Platform">
+                        <figcaption>사용자 친화적인 인터페이스와 편리한 콘텐츠 관리 기능을 갖춘 블로그 플랫폼</figcaption>
+                    </figure>
+                    <ul class="sub">
+                        <li><strong class="bold">사용한 기술</strong>HTML5, CSS3, JavaScript, Vue.js</li>
+                        <li><strong class="bold">기여도</strong>90% (디자인, 퍼블리싱 및 테스트)</li>
+                        <li><a href="https://jdy5893.github.io/pf5/" class="block">작품보기</a></li>
                     </ul>
                 </li>
             </ul>
@@ -245,45 +353,34 @@
     </section>
     <!-- Work Process -->
     <section id="process">
-        <div class="wrap paddingT50 paddingB50 grid">
+        <div class="wrap paddingT50 paddingB50 flex">
             <h2 class="h2 borderB">Learning Archive</h2>
             <p>학습 과정에서 생성된 문서, 자료, 산출물을 체계적으로 모아놓았습니다</p>
-            <h3 class="h5 bold">UI/UX 웹디자인,웹퍼블리셔 <span class="block"></span>5개월 과정<span class="block"></span>[2024.04.02 - 08.22]</h3>
-            <ul class="flex">
-                <li class="sm14">포토샵(기초)</li>
-                <li class="sm14">일러스트(기초)</li>
-                <li class="sm14">프로토타입 기초데이터<span class="block"></span>수집 및 스케치</li>
-                <li class="sm14">프로토타입 제작 및<span class="block"></span> 사용성 테스트</li>
-                <li class="sm14">HTML & CSS</li>
-                <li class="sm14">서비스·경험디자인<span class="block"></span> 관찰조사</li>
-                <li class="sm14">서비스·경험디자인<span class="block"></span> 시나리오 개발</li>
-                <li class="sm14">디자인 구성요소 설계</li>
-                <li class="sm14">디자인 구성요소 제작</li>
-                <li class="sm14">디자인 구성요소 응용</li>
-                <li class="sm14">자바스크립트 <span class="block"></span>& 제이쿼리</li>
-                <li class="sm14">스마트문화앱 UX 설계</li>
-                <li class="sm14">스마트문화앱 UI 디자인</li>
-                <li class="sm14">프로젝트 완료 자료정리</li>
-                <li class="sm14">프로젝트 완료<span class="block"></span> 결과보고서 작성</li>
-                <li class="sm14">프로젝트 완료<span class="block"></span> 최종보고</li>
-                <li class="sm14">Vue.js</li>
-                <li class="sm14">웹영상콘텐츠 후반작업<span class="block"></span>-비NCS실기</li>
-                <li class="sm14">디지털디자인 사후관리</li>
-            </ul>
-            <a href="" class="block">Learning Archive 보기</a>
-            <div class="sourcesite">
-                <h3>My Source Site</h3>
-                <ul class="src flex">
-                    <li><a href="" class="block" target="_blank">GDWEB</a></li>
-                    <li><a href="" class="block" target="_blank">Pinterest</a></li>
-                    <li><a href="" class="block" target="_blank">pixabay</a></li>
-                    <li><a href="" class="block" target="_blank">unsplash</a></li>
-                    <li><a href="" class="block" target="_blank">구글폰트</a></li>
-                    <li><a href="" class="block" target="_blank">Canva</a></li>
-                    <li><a href="" class="block" target="_blank">Adobe Color</a></li>
-                    <li><a href="" class="block" target="_blank">gliffy</a></li>
+            <div class="list">
+                <h3 class="h4">UI/UX 웹디자인,웹퍼블리셔 <span class="block"></span>5개월 과정<span class="block"></span>[2024.04.02 - 08.22]</h3>
+                <ul class="flex">
+                    <li class="h5">포토샵(기초)</li>
+                    <li class="h5">일러스트(기초)</li>
+                    <li class="h5">프로토타입 기초데이터 수집 및 스케치</li>
+                    <li class="h5">프로토타입 제작 및 사용성 테스트</li>
+                    <li class="h5">HTML & CSS</li>
+                    <li class="h5">서비스·경험디자인 관찰조사</li>
+                    <li class="h5">서비스·경험디자인 시나리오 개발</li>
+                    <li class="h5">디자인 구성요소 설계</li>
+                    <li class="h5">디자인 구성요소 제작</li>
+                    <li class="h5">디자인 구성요소 응용</li>
+                    <li class="h5">자바스크립트& 제이쿼리</li>
+                    <li class="h5">스마트문화앱 UX 설계</li>
+                    <li class="h5">스마트문화앱 UI 디자인</li>
+                    <li class="h5">프로젝트 완료 자료정리</li>
+                    <li class="h5">프로젝트 완료 결과보고서 작성</li>
+                    <li class="h5">프로젝트 완료 최종보고</li>
+                    <li class="h5">Vue.js</li>
+                    <li class="h5">웹영상콘텐츠 후반작업-비NCS실기</li>
+                    <li class="h5">디지털디자인 사후관리</li>
                 </ul>
-            </div>
+                <a href="" class="block">Learning Archive 보기</a>
+            </div> 
         </div>
     </section>
     <!-- Contact -->

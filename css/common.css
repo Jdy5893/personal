@@ -9,12 +9,13 @@ body{
   margin: 0 auto;
 }
 .h1{ /* 타이틀문구 */
-  font-size: 40px;
+  font-size: 90px;
   font-weight: 700;
   color: #111;
+  text-transform: uppercase;
 }
 .h2{ /* 섹션 제목 */
-  font-size: 36px;
+  font-size: 70px;
   font-weight: 600;
   color: #222 !important;
 }
@@ -55,7 +56,7 @@ body{
   padding-top: 20px;
 }
 .paddingB20{
-  /*! padding-bottom: 20px; */
+  padding-bottom: 20px;
 }
 .paddingT30{
   padding-top: 30px;
@@ -102,6 +103,38 @@ body{
 }
 .p-color{
   
+}
+.clickBtn{
+  background-color: #78d2d6 !important;
+}
+.top{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color: green;
+  text-align: center;
+  border: 5px double green;
+  cursor: pointer;
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+  z-index: 1;
+}
+.top::after{
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(176,229,208,1) 42%, rgba(92,202,238,0.41) 93.6% );
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: 1s;
+}
+.top:hover::after{
+  opacity: 1;
 }
 /* 보더스타일 */
 .borderB{
