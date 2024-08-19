@@ -1,9 +1,11 @@
 @media screen and (max-width:768px){
+  body{
+    
+  }
   header div.wrap nav{
-    column-gap: 0px;
+    padding-top: 10px;
   }
   header div.wrap nav h1 a{
-    width: 180px;
   }
   header div.wrap nav ul.gnb{
     display: none;
@@ -13,9 +15,13 @@
   }
   header div.wrap nav button.ham{
     display: initial;
-    background-image: url(../img/.svg);
+    background-image: url(../img/svg/menu.svg);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    font-size: 0;
+    background-position: center;
+    cursor: pointer;
   }
-  .wrap{
-    padding: 0 20px;
-  }
+  
 }
