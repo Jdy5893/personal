@@ -15,9 +15,9 @@
     <link rel="stylesheet" href="css/responsive.css">
     <script src="js/jquery-3.7.1.js"></script>
     <!-- 슬릭 -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
         $(document).ready(function(){
             // 각 메뉴 누르면 그 위치로
@@ -29,11 +29,13 @@
                 $("#contact").offset().top
             ];
             var n;
+            //상단 메뉴
             $("header div.wrap nav ul.gnb li").click(function(){
                 n = $(this).index();
                 $("html,body").animate({scrollTop:c[n]},1000);
                 return false;
             });
+            //하단 메뉴
             $("footer div.wrap ul.fnb li").click(function(){
                 n = $(this).index();
                 $("html,body").animate({scrollTop:c[n]},1000);
@@ -274,30 +276,6 @@
                 </ul>
             </div>
         </div>
-        <section id="rolling">
-            <div class="sourceSite">
-                <section class="source">
-                    <p>GDWEB</p>
-                    <p>Pinterest</p>
-                    <p>pixabay</p>
-                    <p>unsplash</p>
-                    <p>구글폰트</p>
-                    <p>Canva</p>
-                    <p>Adobe Color</p>
-                    <p>gliffy</p>
-                </section>
-                <section class="source">
-                    <p>GDWEB</p>
-                    <p>Pinterest</p>
-                    <p>pixabay</p>
-                    <p>unsplash</p>
-                    <p>구글폰트</p>
-                    <p>Canva</p>
-                    <p>Adobe Color</p>
-                    <p>gliffy</p>
-                </section>
-            </div>
-        </section>
     </section>
   
     <!-- Portfolio  -->
@@ -319,7 +297,7 @@
                         <li><strong class="bold">기여도</strong>80% (디자인, 퍼블리싱 및 테스트)</li>
                         <li></li>
                     </ul>
-                    <a href="https://jdy5893.github.io/pf1/" class="block">작품보기</a>
+                    <a href="https://jdy5893.github.io/pf1/" target="_blank" class="block">작품보기</a>
                 </li>
                 <li class="flex pf2">
                     <h3 class="h4">알툴즈 홈페이지</h3>
@@ -332,7 +310,7 @@
                         <li><strong class="bold">기여도</strong>80% (디자인, 퍼블리싱 및 테스트)</li>
                         <li></li>
                     </ul>
-                    <a href="https://jdy5893.github.io/pf2/" class="block">작품보기</a>
+                    <a href="https://jdy5893.github.io/pf2/" target="_blank" class="block">작품보기</a>
                 </li>
                 <li class="flex pf3">
                     <h3 class="h4">하이트진로 홈페이지</h3>
@@ -345,7 +323,7 @@
                         <li><strong class="bold">기여도</strong>80% (디자인, 퍼블리싱 및 테스트)</li>
                         <li></li>
                     </ul>
-                    <a href="https://jdy5893.github.io/pf3/" class="block">작품보기</a>
+                    <a href="https://jdy5893.github.io/pf3/" target="_blank" class="block">작품보기</a>
                 </li>
                 <li class="flex pf4">
                     <h3 class="h4">독도체험관 홈페이지</h3>
@@ -358,7 +336,7 @@
                         <li><strong class="bold">기여도</strong>100% (단독 프로젝트)</li>
                         <li></li>
                     </ul>
-                    <a href="https://jdy5893.github.io/pf4/" class="block">작품보기</a>
+                    <a href="https://jdy5893.github.io/pf4/" target="_blank" class="block">작품보기</a>
                 </li>
                 <li class="flex pf5">
                     <h3 class="h4">프레드피자 홈페이지</h3>
@@ -371,7 +349,7 @@
                         <li><strong class="bold">기여도</strong>100% (단독 프로젝트)</li>
                         <li></li>
                     </ul>
-                    <a href="https://jdy5893.github.io/pf5/" class="block">작품보기</a>
+                    <a href="https://jdy5893.github.io/pf5/" target="_blank" class="block">작품보기</a>
                 </li>
                 <li class="flex pf5">
                     <h3 class="h4">프레드피자 홈페이지</h3>
@@ -384,7 +362,7 @@
                         <li><strong class="bold">기여도</strong>100% (단독 프로젝트)</li>
                         <li></li>
                     </ul>
-                    <a href="https://jdy5893.github.io/pf5/" class="block">작품보기</a>
+                    <a href="https://jdy5893.github.io/pf5/" target="_blank" class="block">작품보기</a>
                 </li>
             </ul>
         </div>

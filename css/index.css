@@ -650,8 +650,10 @@ justify-content: space-evenly;
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto auto;
-  row-gap: 100px;
+  row-gap: 80px;
   column-gap: 40px;
+  height: 800px;
+  box-sizing: border-box;
 }  
 #portfolio div.wrap h2 {
   grid-column: 1;
