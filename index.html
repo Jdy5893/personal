@@ -152,7 +152,50 @@
             AOS.init();
         });
     </script>
-
+    <script type="text/javascript">
+        window.onload = function () {
+            var elm = ".box";
+            $(elm).each(function (index) {
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                    } 
+                    else if (event.detail)
+                        delta = -event.detail / 3;
+                    var moveTop = $(window).scrollTop();
+                    var elmSelecter = $(elm).eq(index);
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(elmSelecter).next() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).next().offset().top;
+                            }catch(e){}
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(elmSelecter).prev() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).prev().offset().top;
+                            }catch(e){}
+                        }
+                    }
+                     
+                    // 화면 이동 0.8초(800)
+                    $("html,body").stop().animate({
+                        scrollTop: moveTop + 'px'
+                    }, {
+                        duration: 800, complete: function () {
+                        }
+                    });
+                });
+            });
+        }
+    </script>
 
 </head>
 <body>
@@ -177,7 +220,7 @@
         </div>
     </header>
     <!-- 타이틀영역 -->
-    <div id="title">
+    <div id="title" class="box">
         <div class="wrap">
             <h2 class="h1">Portfolio</h2>
             <p class="h4">새로운 도전을 향한 열정적인 웹퍼블리셔 정다영</p>
@@ -187,7 +230,7 @@
     </div>
     <!-- 메인 -->
     <!-- about me -->
-    <section id="aboutme">
+    <section id="aboutme" class="box">
         <div class="wrap paddingT50 paddingB50 grid">
             <h2 class="h2">About Me</h2>
             <figure>
@@ -223,7 +266,7 @@
         </div>
     </section>
     <!-- skill -->
-    <section id="skill">
+    <section id="skill" class="box">
         <div class="wrap grid paddingT50 paddingB50">
             <h2 class="h2">SKill<span>&</span>Tools</h2>
             <p class="">스킬 앤 툴 설명</p>
@@ -289,7 +332,7 @@
     </section>
   
     <!-- Portfolio  -->
-    <section id="portfolio">
+    <section id="portfolio" class="box">
         <div class="wrap paddingT50 paddingB50 flex">
             <h2 class="h2">Portfolio</h2>
             <p class="p15">"아래 작품들은 제가 학원에서 수료하는 동안 진행한 다양한 웹디자인 및 웹퍼블리싱 프로젝트들입니다.<span class="block"></span>
@@ -361,10 +404,10 @@
                     </ul>
                     <a href="https://jdy5893.github.io/pf5/" target="_blank" class="block">작품보기</a>
                 </li>
-                <li class="flex pf5">
-                    <h3 class="h4">프레드피자 홈페이지</h3>
+                <li class="flex pf6">
+                    <h3 class="h4">카페24 쇼핑몰 홈페이지</h3>
                     <figure>
-                        <img src="img/pf5.png" alt="Blog Platform">
+                        <img src="img/pf6.png" alt="Blog Platform">
                         <figcaption>사용자 친화적인 인터페이스와 편리한 콘텐츠 관리 기능을 갖춘 블로그 플랫폼</figcaption>
                     </figure>
                     <ul class="sub">
@@ -372,13 +415,13 @@
                         <li><strong class="bold">기여도</strong>100% (단독 프로젝트)</li>
                         <li></li>
                     </ul>
-                    <a href="https://jdy5893.github.io/pf5/" target="_blank" class="block">작품보기</a>
+                    <a href="https://jdy5893.github.io/pf6/" target="_blank" class="block">작품보기</a>
                 </li>
             </ul>
         </div>
     </section>
     <!-- Work Process -->
-    <section id="process">
+    <section id="process" class="box">
         <div class="wrap paddingT50 paddingB50 flex">
             <h2 class="h2">Learning Archive</h2>
             <p>학습 과정에서 생성된 문서, 자료, 산출물을 체계적으로 모아놓았습니다</p>
@@ -410,7 +453,7 @@
         </div>
     </section>
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="box">
         <div class="wrap paddingT50 paddingB50 grid">
             <h2 class="h2">Contact</h2>
             <p class="p15">궁금한 사항이나 제안이 있으시면 연락 주시기 바랍니다.</p>

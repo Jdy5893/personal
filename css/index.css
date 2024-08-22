@@ -342,6 +342,8 @@ color: #777 !important;
 #skill div.wrap p{
   grid-column: 2;
   grid-row: 1;
+  text-align: center;
+  align-self: center;
 }
 #skill div.wrap ul.icon li{
   padding: 40px 0;

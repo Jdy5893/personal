@@ -114,6 +114,14 @@
   grid-column: 1;
   grid-row: 4;
   }
+  #skill div.wrap .iconsub > ul li{
+    
+  font-size: 15px;
+  }
+  #skill div.wrap .iconsub > ul li::before{ 
+  width: 80px;
+  height: 80px;
+  }
   
   
 }
