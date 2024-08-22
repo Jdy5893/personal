@@ -30,6 +30,7 @@
 - 하이트진로 https://jdy5893.github.io/pf3/
 - 독도체험관 https://jdy5893.github.io/pf4/
 - FRED PIZZA https://jdy5893.github.io/pf5/
+- 카페24 쇼핑몰 https://jdy5893.github.io/pf6/
 
 ## 스크린샷 또는 데모(포트폴리오 웹사이트의 스크린샷을 추가)
 ![pf1](https://github.com/user-attachments/assets/5de4ef38-d376-48e0-a5f9-90cba798b7fc)
