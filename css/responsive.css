@@ -2,10 +2,12 @@
   body{
     
   }
-  header div.wrap nav{
-    padding-top: 10px;
+  header div.wrap{
+    padding: 20px;
   }
-  header div.wrap nav h1 a{
+  header div.wrap nav h1 a{ 
+  width: 70px;
+  height: 60px;
   }
   header div.wrap nav ul.gnb{
     display: none;
@@ -16,12 +18,102 @@
   header div.wrap nav button.ham{
     display: initial;
     background-image: url(../img/svg/menu.svg);
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-repeat: no-repeat;
     font-size: 0;
     background-position: center;
     cursor: pointer;
   }
+  
+  
+/*  타이틀  */
+  div#title div.wrap h2{  
+  font-size: 60px;
+  }
+  div#title div.wrap p{ 
+  font-size: 20px;
+  }
+/*  메인  */
+  .h2{
+    font-size: 50px;
+  }
+  #aboutme div.wrap{
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  row-gap: 30px;
+  justify-items: center;
+  padding-top: 50px;
+  }
+  #aboutme div.wrap h2{
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 50px;
+  }
+  #aboutme div.wrap figure{ 
+  grid-column: 1;
+  grid-row: 2;
+  width: 200px;
+  height: 200px;
+  }
+  #aboutme div.wrap figure::before{
+  width: 120px;
+  height: 120px;
+  left: -100px;
+  }
+  #aboutme div.wrap figure::after{
+  width: 120px;
+  height: 120px;
+  right: -82px;
+  bottom: -40px;
+  }
+  #aboutme div.wrap ul.intro{  
+  grid-column: 1;
+  grid-row: 3;
+  }
+  #aboutme div.wrap ul.intro li:nth-child(1) p{
+    
+  }
+/*  스킬  */
+  #skill div.wrap{  
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto 1fr;
+  padding-top: 50px;
+  row-gap: 0;
+  }
+  #skill div.wrap h2{
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0;
+  text-align: center;
+  }
+  #skill div.wrap p{ 
+  grid-column: 1;
+  grid-row: 2;
+  }
+  #skill div.wrap ul.icon{
+  grid-column: 1;
+  grid-row: 3;
+  display: flex;
+  }
+  #skill div.wrap ul.icon li{
+  height: 95px;
+  width: calc((100% - 30px) / 4);
+  /*! writing-mode: vertical-lr; */
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  padding: 5px;
+  box-sizing: border-box;
+  }
+  #skill div.wrap ul.icon li:not(:last-child){
+  margin: 0;
+  margin-right: 10px;
+  }
+  #skill div.wrap .iconsub{
+  grid-column: 1;
+  grid-row: 4;
+  }
+  
   
 }
